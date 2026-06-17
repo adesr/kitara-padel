@@ -1,0 +1,566 @@
+{
+  "branches": [
+    {
+      "id": "b1",
+      "name": "Kitara Padel Arena",
+      "address": "128 Padel Boulevard, Central District",
+      "createdAt": "2026-05-17T02:00:00.000Z"
+    },
+    {
+      "id": "b2",
+      "name": "Kitara Padel Club Beachside",
+      "address": "45 Shoreline Drive, Coastal Hub",
+      "createdAt": "2026-05-17T02:00:00.000Z"
+    }
+  ],
+  "courts": [
+    {
+      "id": "c1",
+      "branchId": "b1",
+      "name": "Court 1 - Panoramic Pro",
+      "type": "Panoramic",
+      "isActive": true
+    },
+    {
+      "id": "c2",
+      "branchId": "b1",
+      "name": "Court 2 - Indoor Standard",
+      "type": "Indoor",
+      "isActive": true
+    },
+    {
+      "id": "c3",
+      "branchId": "b1",
+      "name": "Court 3 - Outdoor Classic",
+      "type": "Outdoor",
+      "isActive": false
+    },
+    {
+      "id": "c4",
+      "branchId": "b2",
+      "name": "Court A - Panoramic Beach",
+      "type": "Panoramic",
+      "isActive": true
+    },
+    {
+      "id": "c5",
+      "branchId": "b2",
+      "name": "Court B - Indoor Aircon",
+      "type": "Indoor",
+      "isActive": true
+    }
+  ],
+  "users": [
+    {
+      "id": "u_admin",
+      "name": "Admin Manager",
+      "email": "admin@kitara.com",
+      "role": "branch_admin",
+      "tier": "general"
+    },
+    {
+      "id": "u_john",
+      "name": "John Doe",
+      "email": "john@member.com",
+      "role": "customer",
+      "tier": "member"
+    },
+    {
+      "id": "u_jane",
+      "name": "Jane Smith",
+      "email": "jane@general.com",
+      "role": "customer",
+      "tier": "general"
+    },
+    {
+      "id": "u_alex",
+      "name": "Alex Carter",
+      "email": "alex@inactive.com",
+      "role": "customer",
+      "tier": "general"
+    },
+    {
+      "id": "u_sarah",
+      "name": "Sarah Connor",
+      "email": "sarah@member.com",
+      "role": "customer",
+      "tier": "member"
+    },
+    {
+      "id": "u_q5gij9qsr",
+      "name": "admin",
+      "email": "admin@example.com",
+      "role": "customer",
+      "tier": "general"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk1",
+      "courtId": "c1",
+      "userId": "u_john",
+      "startTime": "2026-06-16T02:00:00.000Z",
+      "endTime": "2026-06-16T04:00:00.000Z",
+      "finalPrice": "80.00",
+      "status": "confirmed"
+    },
+    {
+      "id": "bk2",
+      "courtId": "c2",
+      "userId": "u_jane",
+      "startTime": "2026-06-16T07:00:00.000Z",
+      "endTime": "2026-06-16T09:00:00.000Z",
+      "finalPrice": "100.00",
+      "status": "confirmed"
+    },
+    {
+      "id": "bk3",
+      "courtId": "c1",
+      "userId": "u_sarah",
+      "startTime": "2026-06-17T11:00:00.000Z",
+      "endTime": "2026-06-17T13:00:00.000Z",
+      "finalPrice": "110.40",
+      "status": "confirmed"
+    },
+    {
+      "id": "bk4",
+      "courtId": "c4",
+      "userId": "u_jane",
+      "startTime": "2026-06-17T03:00:00.000Z",
+      "endTime": "2026-06-17T05:00:00.000Z",
+      "finalPrice": "100.00",
+      "status": "confirmed"
+    },
+    {
+      "id": "bk_352xvh85w",
+      "courtId": "c4",
+      "userId": "u_sarah",
+      "startTime": "2026-06-16T03:00:00.000Z",
+      "endTime": "2026-06-16T05:00:00.000Z",
+      "finalPrice": "80.00",
+      "status": "confirmed"
+    }
+  ],
+  "financeLedger": [
+    {
+      "id": "f1",
+      "branchId": "b1",
+      "bookingId": "bk1",
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "80.00",
+      "description": "Reservation BK1 (John Doe)",
+      "transactionDate": "2026-06-16T04:00:00.000Z"
+    },
+    {
+      "id": "f2",
+      "branchId": "b1",
+      "bookingId": "bk2",
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "100.00",
+      "description": "Reservation BK2 (Jane Smith)",
+      "transactionDate": "2026-06-16T09:00:00.000Z"
+    },
+    {
+      "id": "f_addon1",
+      "branchId": "b1",
+      "bookingId": "bk1",
+      "type": "INCOME",
+      "category": "racket_rent",
+      "amount": "15.00",
+      "description": "Racket rental x3 for BK1",
+      "transactionDate": "2026-06-16T04:00:00.000Z"
+    },
+    {
+      "id": "f_exp1",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "maintenance",
+      "amount": "150.00",
+      "description": "Court net replacement",
+      "transactionDate": "2026-06-11T05:00:00.000Z"
+    },
+    {
+      "id": "f_exp2",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "utility",
+      "amount": "320.00",
+      "description": "Monthly air-conditioning service",
+      "transactionDate": "2026-06-01T03:00:00.000Z"
+    },
+    {
+      "id": "f_exp3",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "utility",
+      "amount": "85.00",
+      "description": "Weekly trash collection service",
+      "transactionDate": "2026-05-25T03:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_2",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -2",
+      "transactionDate": "2026-06-14T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_3",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -3",
+      "transactionDate": "2026-06-13T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_4",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -4",
+      "transactionDate": "2026-06-12T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_5",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -5",
+      "transactionDate": "2026-06-11T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_exp_5",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "maintenance",
+      "amount": "60.00",
+      "description": "Historical Utility/Maintenance -5",
+      "transactionDate": "2026-06-11T08:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_6",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -6",
+      "transactionDate": "2026-06-10T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_7",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -7",
+      "transactionDate": "2026-06-09T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_8",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -8",
+      "transactionDate": "2026-06-08T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_9",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -9",
+      "transactionDate": "2026-06-07T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_10",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -10",
+      "transactionDate": "2026-06-06T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_exp_10",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "utility",
+      "amount": "75.00",
+      "description": "Historical Utility/Maintenance -10",
+      "transactionDate": "2026-06-06T08:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_11",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -11",
+      "transactionDate": "2026-06-05T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_12",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -12",
+      "transactionDate": "2026-06-04T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_13",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -13",
+      "transactionDate": "2026-06-03T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_14",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -14",
+      "transactionDate": "2026-06-02T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_15",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -15",
+      "transactionDate": "2026-06-01T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_exp_15",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "maintenance",
+      "amount": "90.00",
+      "description": "Historical Utility/Maintenance -15",
+      "transactionDate": "2026-06-01T08:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_16",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -16",
+      "transactionDate": "2026-05-31T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_17",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -17",
+      "transactionDate": "2026-05-30T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_18",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -18",
+      "transactionDate": "2026-05-29T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_19",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -19",
+      "transactionDate": "2026-05-28T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_20",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -20",
+      "transactionDate": "2026-05-27T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_exp_20",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "utility",
+      "amount": "105.00",
+      "description": "Historical Utility/Maintenance -20",
+      "transactionDate": "2026-05-27T08:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_21",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -21",
+      "transactionDate": "2026-05-26T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_22",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -22",
+      "transactionDate": "2026-05-25T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_23",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -23",
+      "transactionDate": "2026-05-24T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_24",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -24",
+      "transactionDate": "2026-05-23T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_25",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -25",
+      "transactionDate": "2026-05-22T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_exp_25",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "maintenance",
+      "amount": "120.00",
+      "description": "Historical Utility/Maintenance -25",
+      "transactionDate": "2026-05-22T08:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_26",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -26",
+      "transactionDate": "2026-05-21T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_27",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -27",
+      "transactionDate": "2026-05-20T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_28",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -28",
+      "transactionDate": "2026-05-19T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_29",
+      "branchId": "b2",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "90.00",
+      "description": "Historical Booking Day -29",
+      "transactionDate": "2026-05-18T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_inc_30",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "120.00",
+      "description": "Historical Booking Day -30",
+      "transactionDate": "2026-05-17T05:00:00.000Z"
+    },
+    {
+      "id": "f_hist_exp_30",
+      "branchId": "b1",
+      "bookingId": null,
+      "type": "EXPENSE",
+      "category": "utility",
+      "amount": "135.00",
+      "description": "Historical Utility/Maintenance -30",
+      "transactionDate": "2026-05-17T08:00:00.000Z"
+    },
+    {
+      "id": "f_amum1qx0x",
+      "branchId": "b2",
+      "bookingId": "bk_352xvh85w",
+      "type": "INCOME",
+      "category": "court_rental",
+      "amount": "80.00",
+      "description": "Court rental for booking bk_352xvh85w (Sarah Connor)",
+      "transactionDate": "2026-06-16T15:41:21.108Z"
+    }
+  ]
+}
